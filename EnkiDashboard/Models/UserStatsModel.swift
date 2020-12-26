@@ -13,3 +13,19 @@ struct UserStatsModel: Codable {
     let top_users: Int32
     let saved_users: Int32
 }
+
+var initStatsModel = UserStatsModel(
+    ready_users: 0,
+    draft_users: 0,
+    top_users: 0,
+    saved_users: 0
+)
+
+func initStatsModelData() -> UserStatsModel {
+    return UserStatsModel(
+        ready_users: 0,
+        draft_users: 0,
+        top_users: 0,
+        saved_users: 0
+    )
+}

@@ -12,8 +12,9 @@ struct CardValueView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Done")
+            Text(self.cardValue.title)
                 .font(.system(size: 10))
+                .foregroundColor(Color(self.cardValue.backgroundColorName))
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 
             HStack {
@@ -27,6 +28,7 @@ struct CardValueView: View {
                 
                 Text(self.cardValue.cardValue)
                     .font(.system(size: 10))
+                    .foregroundColor(Color("PrimaryDarkColor"))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             }
         }
@@ -36,7 +38,7 @@ struct CardValueView: View {
 
 struct CardValueView_Previews: PreviewProvider {
     @State static var cardValue: CardValuesModel = CardValuesModel(
-        iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "211,961"
+        title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "211,961"
     )
     
     static var previews: some View {

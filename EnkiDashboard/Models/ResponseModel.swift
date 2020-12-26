@@ -10,11 +10,27 @@ import Foundation
 struct ResponseModel {
     let userStats: UserStatsModel
     let companyStats: [CompanyStatsModel]
+    let weeklyUserStats: [StatsDataItemModel]
+    let weeklyReportStats: [StatsDataItemModel]
+    let weeklyGoogleCacheStats: [StatsDataItemModel]
 }
 
 extension ResponseModel: Decodable {
     enum CodingKeys: String, CodingKey {
         case companyStats = "company_stats"
         case userStats = "user_stats"
+        case weeklyUserStats = "weekly_user_stats"
+        case weeklyReportStats = "weekly_report_stats"
+        case weeklyGoogleCacheStats = "weekly_google_cache_stats"
     }
+}
+
+func initResponseModel() -> ResponseModel {
+    return ResponseModel(
+        userStats: initStatsModelData(),
+        companyStats: [initCompanyStats()],
+        weeklyUserStats: [initStatsDataItemModel()],
+        weeklyReportStats: [initStatsDataItemModel()],
+        weeklyGoogleCacheStats: [initStatsDataItemModel()]
+    )
 }

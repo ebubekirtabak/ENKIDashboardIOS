@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D00C5462593EFB100BEEF40 /* StatsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D00C5452593EFB100BEEF40 /* StatsDataProvider.swift */; };
+		9D145D9D25817A4400645AE8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D145D9C25817A4400645AE8 /* CircleView.swift */; };
+		9D145DA525817ED200645AE8 /* CardValuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D145DA425817ED200645AE8 /* CardValuesView.swift */; };
+		9D19A4302561C1F700B04F17 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19A42F2561C1F700B04F17 /* HttpService.swift */; };
+		9D8814C62572E31A00A6749D /* ReportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8814C52572E31A00A6749D /* ReportCardView.swift */; };
+		9D8F646525670F940025C3E9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F646425670F940025C3E9 /* DashboardView.swift */; };
+		9D8F646A2567132F0025C3E9 /* CompanyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F64692567132F0025C3E9 /* CompanyListView.swift */; };
+		9D9031C125842993000B52B0 /* ReportCardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9031C025842993000B52B0 /* ReportCardDataModel.swift */; };
+		9D9031C725842A34000B52B0 /* CardValuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9031C625842A34000B52B0 /* CardValuesModel.swift */; };
+		9D9FD0AF257ED5FB00AD14D7 /* CircleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9FD0AE257ED5FB00AD14D7 /* CircleModifier.swift */; };
+		9D9FD0B4257EE1A100AD14D7 /* CircleViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9FD0B3257EE1A100AD14D7 /* CircleViewBackground.swift */; };
+		9D9FD0BC257EE4AE00AD14D7 /* CardValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9FD0BB257EE4AE00AD14D7 /* CardValueView.swift */; };
+		9DB5C20D2569930500BB0921 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5C20C2569930500BB0921 /* ResponseModel.swift */; };
+		9DB5C2152569938400BB0921 /* UserStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5C2142569938400BB0921 /* UserStatsModel.swift */; };
+		9DB5C2222569947F00BB0921 /* CompanyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5C2212569947F00BB0921 /* CompanyStatsModel.swift */; };
+		9DB5C227256998BB00BB0921 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5C226256998BB00BB0921 /* BaseResponseModel.swift */; };
+		9DD7924825952D6D00CCA4D8 /* StatsDataItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7924725952D6D00CCA4D8 /* StatsDataItemModel.swift */; };
+		9DE05E9F2550B4AA00132819 /* EnkiDashboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE05E9E2550B4AA00132819 /* EnkiDashboardApp.swift */; };
+		9DE05EA12550B4AA00132819 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE05EA02550B4AA00132819 /* ContentView.swift */; };
+		9DE05EA32550B4AC00132819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE05EA22550B4AC00132819 /* Assets.xcassets */; };
+		9DE05EA62550B4AC00132819 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE05EA52550B4AC00132819 /* Preview Assets.xcassets */; };
+		9DE05EB12550B4AD00132819 /* EnkiDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE05EB02550B4AD00132819 /* EnkiDashboardTests.swift */; };
+		9DE05EBC2550B4AD00132819 /* EnkiDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE05EBB2550B4AD00132819 /* EnkiDashboardUITests.swift */; };
+		9DE7ADCF25759D31004354D1 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7ADCE25759D31004354D1 /* CardModifier.swift */; };
+		9DE7ADD825759E22004354D1 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7ADD725759E22004354D1 /* ProgressBarView.swift */; };
+		9DF2EE3E256B044A0069A745 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EE3D256B044A0069A745 /* RemoteImage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		9D19A4342561C5CB00B04F17 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		9DE05EAD2550B4AD00132819 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DE05E932550B4AA00132819 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DE05E9A2550B4AA00132819;
+			remoteInfo = EnkiDashboard;
+		};
+		9DE05EB82550B4AD00132819 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DE05E932550B4AA00132819 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DE05E9A2550B4AA00132819;
+			remoteInfo = EnkiDashboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D00C5452593EFB100BEEF40 /* StatsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsDataProvider.swift; sourceTree = "<group>"; };
+		9D145D9C25817A4400645AE8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		9D145DA425817ED200645AE8 /* CardValuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValuesView.swift; sourceTree = "<group>"; };
+		9D19A42F2561C1F700B04F17 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		9D8814C52572E31A00A6749D /* ReportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCardView.swift; sourceTree = "<group>"; };
+		9D8F646425670F940025C3E9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		9D8F64692567132F0025C3E9 /* CompanyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListView.swift; sourceTree = "<group>"; };
+		9D9031C025842993000B52B0 /* ReportCardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCardDataModel.swift; sourceTree = "<group>"; };
+		9D9031C625842A34000B52B0 /* CardValuesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValuesModel.swift; sourceTree = "<group>"; };
+		9D9FD0AE257ED5FB00AD14D7 /* CircleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleModifier.swift; sourceTree = "<group>"; };
+		9D9FD0B3257EE1A100AD14D7 /* CircleViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewBackground.swift; sourceTree = "<group>"; };
+		9D9FD0BB257EE4AE00AD14D7 /* CardValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValueView.swift; sourceTree = "<group>"; };
+		9DB5C20C2569930500BB0921 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		9DB5C2142569938400BB0921 /* UserStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsModel.swift; sourceTree = "<group>"; };
+		9DB5C2212569947F00BB0921 /* CompanyStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyStatsModel.swift; sourceTree = "<group>"; };
+		9DB5C226256998BB00BB0921 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
+		9DD7924725952D6D00CCA4D8 /* StatsDataItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsDataItemModel.swift; sourceTree = "<group>"; };
+		9DE05E9B2550B4AA00132819 /* EnkiDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnkiDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE05E9E2550B4AA00132819 /* EnkiDashboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnkiDashboardApp.swift; sourceTree = "<group>"; };
+		9DE05EA02550B4AA00132819 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9DE05EA22550B4AC00132819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DE05EA52550B4AC00132819 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9DE05EA72550B4AC00132819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE05EAC2550B4AD00132819 /* EnkiDashboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnkiDashboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE05EB02550B4AD00132819 /* EnkiDashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnkiDashboardTests.swift; sourceTree = "<group>"; };
+		9DE05EB22550B4AD00132819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE05EB72550B4AD00132819 /* EnkiDashboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnkiDashboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE05EBB2550B4AD00132819 /* EnkiDashboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnkiDashboardUITests.swift; sourceTree = "<group>"; };
+		9DE05EBD2550B4AD00132819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE7ADCE25759D31004354D1 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		9DE7ADD725759E22004354D1 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		9DF2EE3D256B044A0069A745 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DE05E982550B4AA00132819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE05EA92550B4AD00132819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE05EB42550B4AD00132819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D00C5442593EDBE00BEEF40 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				9D00C5452593EFB100BEEF40 /* StatsDataProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		9D19A4262561C0BD00B04F17 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9D19A42F2561C1F700B04F17 /* HttpService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9D8814C42572E2E400A6749D /* ReportCardView */ = {
+			isa = PBXGroup;
+			children = (
+				9D9FD0B3257EE1A100AD14D7 /* CircleViewBackground.swift */,
+				9D8814C52572E31A00A6749D /* ReportCardView.swift */,
+				9D9FD0BB257EE4AE00AD14D7 /* CardValueView.swift */,
+				9D145DA425817ED200645AE8 /* CardValuesView.swift */,
+			);
+			path = ReportCardView;
+			sourceTree = "<group>";
+		};
+		9D9031C525842A07000B52B0 /* ReportCardModels */ = {
+			isa = PBXGroup;
+			children = (
+				9D9031C025842993000B52B0 /* ReportCardDataModel.swift */,
+				9D9031C625842A34000B52B0 /* CardValuesModel.swift */,
+			);
+			path = ReportCardModels;
+			sourceTree = "<group>";
+		};
+		9DB5C20B2569929500BB0921 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D9031C525842A07000B52B0 /* ReportCardModels */,
+				9DB5C20C2569930500BB0921 /* ResponseModel.swift */,
+				9DB5C2142569938400BB0921 /* UserStatsModel.swift */,
+				9DB5C2212569947F00BB0921 /* CompanyStatsModel.swift */,
+				9DB5C226256998BB00BB0921 /* BaseResponseModel.swift */,
+				9DD7924725952D6D00CCA4D8 /* StatsDataItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9DB5C22B25699F3300BB0921 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DE7ADD625759E0A004354D1 /* ProgressBarView */,
+				9D8814C42572E2E400A6749D /* ReportCardView */,
+				9DF2EE3D256B044A0069A745 /* RemoteImage.swift */,
+				9D145D9C25817A4400645AE8 /* CircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9DE05E922550B4AA00132819 = {
+			isa = PBXGroup;
+			children = (
+				9DE7ADCD25759D18004354D1 /* Modifiers */,
+				9DE05E9D2550B4AA00132819 /* EnkiDashboard */,
+				9DE05EAF2550B4AD00132819 /* EnkiDashboardTests */,
+				9DE05EBA2550B4AD00132819 /* EnkiDashboardUITests */,
+				9DE05E9C2550B4AA00132819 /* Products */,
+				B3C9A8EA9627DDC095537E08 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		9DE05E9C2550B4AA00132819 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DE05E9B2550B4AA00132819 /* EnkiDashboard.app */,
+				9DE05EAC2550B4AD00132819 /* EnkiDashboardTests.xctest */,
+				9DE05EB72550B4AD00132819 /* EnkiDashboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DE05E9D2550B4AA00132819 /* EnkiDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				9D00C5442593EDBE00BEEF40 /* Providers */,
+				9DB5C22B25699F3300BB0921 /* Views */,
+				9DB5C20B2569929500BB0921 /* Models */,
+				9D19A4262561C0BD00B04F17 /* Services */,
+				9DE05E9E2550B4AA00132819 /* EnkiDashboardApp.swift */,
+				9DE05EA02550B4AA00132819 /* ContentView.swift */,
+				9DE05EA22550B4AC00132819 /* Assets.xcassets */,
+				9DE05EA72550B4AC00132819 /* Info.plist */,
+				9DE05EA42550B4AC00132819 /* Preview Content */,
+				9D8F646425670F940025C3E9 /* DashboardView.swift */,
+				9D8F64692567132F0025C3E9 /* CompanyListView.swift */,
+			);
+			path = EnkiDashboard;
+			sourceTree = "<group>";
+		};
+		9DE05EA42550B4AC00132819 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9DE05EA52550B4AC00132819 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9DE05EAF2550B4AD00132819 /* EnkiDashboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DE05EB02550B4AD00132819 /* EnkiDashboardTests.swift */,
+				9DE05EB22550B4AD00132819 /* Info.plist */,
+			);
+			path = EnkiDashboardTests;
+			sourceTree = "<group>";
+		};
+		9DE05EBA2550B4AD00132819 /* EnkiDashboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9DE05EBB2550B4AD00132819 /* EnkiDashboardUITests.swift */,
+				9DE05EBD2550B4AD00132819 /* Info.plist */,
+			);
+			path = EnkiDashboardUITests;
+			sourceTree = "<group>";
+		};
+		9DE7ADCD25759D18004354D1 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				9DE7ADCE25759D31004354D1 /* CardModifier.swift */,
+				9D9FD0AE257ED5FB00AD14D7 /* CircleModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		9DE7ADD625759E0A004354D1 /* ProgressBarView */ = {
+			isa = PBXGroup;
+			children = (
+				9DE7ADD725759E22004354D1 /* ProgressBarView.swift */,
+			);
+			path = ProgressBarView;
+			sourceTree = "<group>";
+		};
+		B3C9A8EA9627DDC095537E08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DE05E9A2550B4AA00132819 /* EnkiDashboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DE05EC02550B4AD00132819 /* Build configuration list for PBXNativeTarget "EnkiDashboard" */;
+			buildPhases = (
+				9DE05E972550B4AA00132819 /* Sources */,
+				9DE05E982550B4AA00132819 /* Frameworks */,
+				9DE05E992550B4AA00132819 /* Resources */,
+			);
+			buildRules = (
+				9D19A4342561C5CB00B04F17 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = EnkiDashboard;
+			productName = EnkiDashboard;
+			productReference = 9DE05E9B2550B4AA00132819 /* EnkiDashboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DE05EAB2550B4AD00132819 /* EnkiDashboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DE05EC32550B4AD00132819 /* Build configuration list for PBXNativeTarget "EnkiDashboardTests" */;
+			buildPhases = (
+				9DE05EA82550B4AD00132819 /* Sources */,
+				9DE05EA92550B4AD00132819 /* Frameworks */,
+				9DE05EAA2550B4AD00132819 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DE05EAE2550B4AD00132819 /* PBXTargetDependency */,
+			);
+			name = EnkiDashboardTests;
+			productName = EnkiDashboardTests;
+			productReference = 9DE05EAC2550B4AD00132819 /* EnkiDashboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9DE05EB62550B4AD00132819 /* EnkiDashboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DE05EC62550B4AD00132819 /* Build configuration list for PBXNativeTarget "EnkiDashboardUITests" */;
+			buildPhases = (
+				9DE05EB32550B4AD00132819 /* Sources */,
+				9DE05EB42550B4AD00132819 /* Frameworks */,
+				9DE05EB52550B4AD00132819 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DE05EB92550B4AD00132819 /* PBXTargetDependency */,
+			);
+			name = EnkiDashboardUITests;
+			productName = EnkiDashboardUITests;
+			productReference = 9DE05EB72550B4AD00132819 /* EnkiDashboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DE05E932550B4AA00132819 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					9DE05E9A2550B4AA00132819 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					9DE05EAB2550B4AD00132819 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 9DE05E9A2550B4AA00132819;
+					};
+					9DE05EB62550B4AD00132819 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 9DE05E9A2550B4AA00132819;
+					};
+				};
+			};
+			buildConfigurationList = 9DE05E962550B4AA00132819 /* Build configuration list for PBXProject "EnkiDashboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9DE05E922550B4AA00132819;
+			productRefGroup = 9DE05E9C2550B4AA00132819 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DE05E9A2550B4AA00132819 /* EnkiDashboard */,
+				9DE05EAB2550B4AD00132819 /* EnkiDashboardTests */,
+				9DE05EB62550B4AD00132819 /* EnkiDashboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DE05E992550B4AA00132819 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DE05EA62550B4AC00132819 /* Preview Assets.xcassets in Resources */,
+				9DE05EA32550B4AC00132819 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE05EAA2550B4AD00132819 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE05EB52550B4AD00132819 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DE05E972550B4AA00132819 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D145DA525817ED200645AE8 /* CardValuesView.swift in Sources */,
+				9D9FD0BC257EE4AE00AD14D7 /* CardValueView.swift in Sources */,
+				9DB5C227256998BB00BB0921 /* BaseResponseModel.swift in Sources */,
+				9D8814C62572E31A00A6749D /* ReportCardView.swift in Sources */,
+				9D9031C125842993000B52B0 /* ReportCardDataModel.swift in Sources */,
+				9DE7ADCF25759D31004354D1 /* CardModifier.swift in Sources */,
+				9D8F646A2567132F0025C3E9 /* CompanyListView.swift in Sources */,
+				9D9FD0AF257ED5FB00AD14D7 /* CircleModifier.swift in Sources */,
+				9DB5C2222569947F00BB0921 /* CompanyStatsModel.swift in Sources */,
+				9D9FD0B4257EE1A100AD14D7 /* CircleViewBackground.swift in Sources */,
+				9DF2EE3E256B044A0069A745 /* RemoteImage.swift in Sources */,
+				9DE05EA12550B4AA00132819 /* ContentView.swift in Sources */,
+				9D8F646525670F940025C3E9 /* DashboardView.swift in Sources */,
+				9D145D9D25817A4400645AE8 /* CircleView.swift in Sources */,
+				9DB5C2152569938400BB0921 /* UserStatsModel.swift in Sources */,
+				9D9031C725842A34000B52B0 /* CardValuesModel.swift in Sources */,
+				9DE05E9F2550B4AA00132819 /* EnkiDashboardApp.swift in Sources */,
+				9DB5C20D2569930500BB0921 /* ResponseModel.swift in Sources */,
+				9DE7ADD825759E22004354D1 /* ProgressBarView.swift in Sources */,
+				9D19A4302561C1F700B04F17 /* HttpService.swift in Sources */,
+				9DD7924825952D6D00CCA4D8 /* StatsDataItemModel.swift in Sources */,
+				9D00C5462593EFB100BEEF40 /* StatsDataProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE05EA82550B4AD00132819 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DE05EB12550B4AD00132819 /* EnkiDashboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE05EB32550B4AD00132819 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DE05EBC2550B4AD00132819 /* EnkiDashboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DE05EAE2550B4AD00132819 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DE05E9A2550B4AA00132819 /* EnkiDashboard */;
+			targetProxy = 9DE05EAD2550B4AD00132819 /* PBXContainerItemProxy */;
+		};
+		9DE05EB92550B4AD00132819 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DE05E9A2550B4AA00132819 /* EnkiDashboard */;
+			targetProxy = 9DE05EB82550B4AD00132819 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9DE05EBE2550B4AD00132819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9DE05EBF2550B4AD00132819 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DE05EC12550B4AD00132819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"EnkiDashboard/Preview Content\"";
+				DEVELOPMENT_TEAM = X63S2DT32D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = EnkiDashboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = et.EnkiDashboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DE05EC22550B4AD00132819 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"EnkiDashboard/Preview Content\"";
+				DEVELOPMENT_TEAM = X63S2DT32D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = EnkiDashboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = et.EnkiDashboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9DE05EC42550B4AD00132819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X63S2DT32D;
+				INFOPLIST_FILE = EnkiDashboardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = et.EnkiDashboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnkiDashboard.app/EnkiDashboard";
+			};
+			name = Debug;
+		};
+		9DE05EC52550B4AD00132819 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X63S2DT32D;
+				INFOPLIST_FILE = EnkiDashboardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = et.EnkiDashboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnkiDashboard.app/EnkiDashboard";
+			};
+			name = Release;
+		};
+		9DE05EC72550B4AD00132819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X63S2DT32D;
+				INFOPLIST_FILE = EnkiDashboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = et.EnkiDashboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EnkiDashboard;
+			};
+			name = Debug;
+		};
+		9DE05EC82550B4AD00132819 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X63S2DT32D;
+				INFOPLIST_FILE = EnkiDashboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = et.EnkiDashboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EnkiDashboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DE05E962550B4AA00132819 /* Build configuration list for PBXProject "EnkiDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE05EBE2550B4AD00132819 /* Debug */,
+				9DE05EBF2550B4AD00132819 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DE05EC02550B4AD00132819 /* Build configuration list for PBXNativeTarget "EnkiDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE05EC12550B4AD00132819 /* Debug */,
+				9DE05EC22550B4AD00132819 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DE05EC32550B4AD00132819 /* Build configuration list for PBXNativeTarget "EnkiDashboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE05EC42550B4AD00132819 /* Debug */,
+				9DE05EC52550B4AD00132819 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DE05EC62550B4AD00132819 /* Build configuration list for PBXNativeTarget "EnkiDashboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE05EC72550B4AD00132819 /* Debug */,
+				9DE05EC82550B4AD00132819 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DE05E932550B4AA00132819 /* Project object */;
+}

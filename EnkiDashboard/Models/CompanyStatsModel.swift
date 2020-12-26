@@ -22,3 +22,12 @@ extension CompanyStatsModel: Decodable {
         case topReports = "top_reports"
     }
 }
+
+func initCompanyStats() -> CompanyStatsModel {
+    return CompanyStatsModel(
+        companyName: "",
+        finishedReports: 0,
+        waitingReports: 0,
+        topReports: 0
+    )
+}

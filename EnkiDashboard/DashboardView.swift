@@ -9,22 +9,22 @@ import SwiftUI
 
 struct DashboardView: View {
     let apiURL = "http://169.63.92.54:3001/v1/stats/all"
-    
+    @Binding var responseData: ResponseModel
     @State static var cardData = ReportCardDataModel(
         imageUrl: "http://52.116.101.196/static/media/linkedin_logo.c24cde28.png",
         currentValue: 2756,
         cardValues: [
             CardValuesModel(
-                iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "211,961"
+                title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "211,961"
             ),
             CardValuesModel(
-                iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "578"
+                title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: "578"
             ),
             CardValuesModel(
-                iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "0"
+                title: "Preferential", iconName: "arrow.up", backgroundColorName: "AlertColor", cardValue: "0"
             ),
             CardValuesModel(
-                iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "159,756"
+                title: "Saved", iconName: "folder.fill", backgroundColorName: "SecondaryAccentColor", cardValue: "159,756"
             )
         ]
     )
@@ -34,7 +34,11 @@ struct DashboardView: View {
             NavigationView {
                 NavigationLink(destination: ReportCardView(cardData: DashboardView.$cardData)) {
                     VStack {
-                        ReportCardView(cardData: DashboardView.$cardData)
+                        ReportCardView(cardData:
+                                        Binding(get: {   self.parseLinkedinData(
+                                            responseData: self.responseData
+                                        ) }, set: { _,_ in  DashboardView.$cardData })
+                                      )
                         ReportCardView(cardData: DashboardView.$cardData)
                         ReportCardView(cardData: DashboardView.$cardData)
                     }
@@ -52,16 +56,33 @@ struct DashboardView: View {
             
 
         }.background(Color("Background"))
+//        .onAppear {
+//            self.parseLinkedinData(
+//                responseData: self.responseData
+//            )
+//        }
+    }
+    
+    func parseLinkedinData(responseData: ResponseModel) -> ReportCardDataModel {
+        var cardValue = ReportCardDataModel(
+            imageUrl: "http://52.116.101.196/static/media/linkedin_logo.c24cde28.png",
+            currentValue: responseData.weeklyUserStats[0].number ?? 0,
+            cardValues: StatsDataProvider().getLinkedinValues(
+                userStats: responseData.userStats
+            )
+        )
+        return cardValue
     }
     
 }
 
+#if DEBUG
 struct DashboardView_Previews: PreviewProvider {
-  
-    
+    @State static var responseModel = initResponseModel()
     static var previews: some View {
         Group {
-            DashboardView()
+            DashboardView(responseData: $responseModel)
         }
     }
 }
+#endif
