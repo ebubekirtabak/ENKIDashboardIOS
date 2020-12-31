@@ -7,15 +7,17 @@
 
 import Foundation
 
-struct ScraperStatsModel: Codable {
+struct ScraperStatsModel {
     let waitingUsers: Int32
     let preferentialUsers: Int32
 }
 
-var initScraperStatsModel = ScraperStatsModel (
-    waitingUsers: 0,
-    preferentialUsers: 0
-)
+extension ScraperStatsModel: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case waitingUsers = "waiting_users"
+        case preferentialUsers = "preferential_users"
+    }
+}
 
 func initScraperStatsModelData() -> ScraperStatsModel {
     return ScraperStatsModel(
