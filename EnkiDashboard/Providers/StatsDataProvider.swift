@@ -14,16 +14,16 @@ class StatsDataProvider {
        
     }
     
-    func getLinkedinValues(userStats: UserStatsModel) -> [CardValuesModel] {
+    func getLinkedinValues(userStats: UserStatsModel, scraperStats: ScraperStatsModel) -> [CardValuesModel] {
         return  [
             CardValuesModel(
                 title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: userStats.ready_users
             ),
             CardValuesModel(
-                title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: userStats.draft_users
+                title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: scraperStats.waitingUsers
             ),
             CardValuesModel(
-                title: "Preferential", iconName: "arrow.up", backgroundColorName: "AlertColor", cardValue: 0
+                title: "Preferential", iconName: "arrow.up", backgroundColorName: "AlertColor", cardValue: scraperStats.preferentialUsers
             ),
             CardValuesModel(
                 title: "Saved", iconName: "folder.fill", backgroundColorName: "SecondaryAccentColor", cardValue: userStats.saved_users

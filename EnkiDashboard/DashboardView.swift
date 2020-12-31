@@ -64,11 +64,13 @@ struct DashboardView: View {
     }
     
     func parseLinkedinData(responseData: ResponseModel) -> ReportCardDataModel {
+        
         var cardValue = ReportCardDataModel(
             imageUrl: "http://52.116.101.196/static/media/linkedin_logo.c24cde28.png",
             currentValue: responseData.weeklyUserStats[0].number,
             cardValues: StatsDataProvider().getLinkedinValues(
-                userStats: responseData.userStats
+                userStats: responseData.userStats,
+                scraperStats: responseData.scraperStats
             )
         )
         return cardValue

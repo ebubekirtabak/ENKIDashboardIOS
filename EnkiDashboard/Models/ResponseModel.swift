@@ -30,7 +30,7 @@ extension ResponseModel: Decodable {
 func initResponseModel() -> ResponseModel {
     return ResponseModel(
         userStats: initStatsModelData(),
-        scraperStats: initScraperStatsModelData()
+        scraperStats: initScraperStatsModelData(),
         companyStats: [initCompanyStats()],
         weeklyUserStats: [initStatsDataItemModel()],
         weeklyReportStats: [initStatsDataItemModel()],
