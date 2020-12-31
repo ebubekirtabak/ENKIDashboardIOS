@@ -26,7 +26,7 @@ struct CardValueView: View {
                     .frame(width: 18.0, height: 18.0)
                     .foregroundColor(Color(self.cardValue.backgroundColorName))
                 
-                Text(self.cardValue.cardValue)
+                Text(self.formatNumber(number: self.cardValue.cardValue))
                     .font(.system(size: 10))
                     .foregroundColor(Color("PrimaryDarkColor"))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -34,11 +34,19 @@ struct CardValueView: View {
         }
         
     }
+    
+    func formatNumber(number: Int32) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumSignificantDigits = 1
+        formatter.minimumFractionDigits = 2
+        return formatter.string(from: NSNumber(value: number))!
+    }
 }
 
 struct CardValueView_Previews: PreviewProvider {
     @State static var cardValue: CardValuesModel = CardValuesModel(
-        title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "211,961"
+        title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: 211961
     )
     
     static var previews: some View {

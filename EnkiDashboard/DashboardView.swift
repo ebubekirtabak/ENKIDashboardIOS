@@ -15,16 +15,16 @@ struct DashboardView: View {
         currentValue: 2756,
         cardValues: [
             CardValuesModel(
-                title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "211,961"
+                title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: 211961
             ),
             CardValuesModel(
-                title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: "578"
+                title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: 578
             ),
             CardValuesModel(
-                title: "Preferential", iconName: "arrow.up", backgroundColorName: "AlertColor", cardValue: "0"
+                title: "Preferential", iconName: "arrow.up", backgroundColorName: "AlertColor", cardValue: 0
             ),
             CardValuesModel(
-                title: "Saved", iconName: "folder.fill", backgroundColorName: "SecondaryAccentColor", cardValue: "159,756"
+                title: "Saved", iconName: "folder.fill", backgroundColorName: "SecondaryAccentColor", cardValue: 159756
             )
         ]
     )
@@ -66,7 +66,7 @@ struct DashboardView: View {
     func parseLinkedinData(responseData: ResponseModel) -> ReportCardDataModel {
         var cardValue = ReportCardDataModel(
             imageUrl: "http://52.116.101.196/static/media/linkedin_logo.c24cde28.png",
-            currentValue: responseData.weeklyUserStats[0].number ?? 0,
+            currentValue: responseData.weeklyUserStats[0].number,
             cardValues: StatsDataProvider().getLinkedinValues(
                 userStats: responseData.userStats
             )
@@ -76,7 +76,6 @@ struct DashboardView: View {
     
 }
 
-#if DEBUG
 struct DashboardView_Previews: PreviewProvider {
     @State static var responseModel = initResponseModel()
     static var previews: some View {
@@ -85,4 +84,3 @@ struct DashboardView_Previews: PreviewProvider {
         }
     }
 }
-#endif

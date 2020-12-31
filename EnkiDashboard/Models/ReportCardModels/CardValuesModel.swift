@@ -11,5 +11,5 @@ struct CardValuesModel: Codable {
     let title: String
     let iconName: String
     let backgroundColorName: String
-    let cardValue: String
+    let cardValue: Int32
 }

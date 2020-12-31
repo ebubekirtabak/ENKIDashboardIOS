@@ -27,16 +27,16 @@ struct CardValuesView: View {
 struct CardValuesView_Previews: PreviewProvider {
     @State static var cardValues: [CardValuesModel] = [
         CardValuesModel(
-            title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "211,961"
+            title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: 211961
         ),
         CardValuesModel(
-            title: "Waiting", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "578"
+            title: "Waiting", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: 578
         ),
         CardValuesModel(
-            title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "0"
+            title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: 0
         ),
         CardValuesModel(
-            title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: "159,756"
+            title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: 159756
         )
     ]
     

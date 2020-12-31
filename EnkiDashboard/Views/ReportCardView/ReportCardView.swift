@@ -53,16 +53,16 @@ struct ReportCardView: View {
 struct ReportCardView_Previews: PreviewProvider {
     @State static var cardValues: [CardValuesModel] = [
         CardValuesModel(
-            title: "Done", iconName: "", backgroundColorName: "", cardValue: "211,961"
+            title: "Done", iconName: "", backgroundColorName: "", cardValue: 211961
         ),
         CardValuesModel(
-            title: "Done", iconName: "", backgroundColorName: "", cardValue: "578"
+            title: "Done", iconName: "", backgroundColorName: "", cardValue: 578
         ),
         CardValuesModel(
-            title: "Done", iconName: "", backgroundColorName: "", cardValue: "0"
+            title: "Done", iconName: "", backgroundColorName: "", cardValue: 0
         ),
         CardValuesModel(
-            title: "Done", iconName: "", backgroundColorName: "", cardValue: "159,756"
+            title: "Done", iconName: "", backgroundColorName: "", cardValue: 159756
         )
     ]
     
