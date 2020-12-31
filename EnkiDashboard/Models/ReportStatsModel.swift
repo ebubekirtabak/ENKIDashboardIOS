@@ -26,11 +26,11 @@ extension ReportStatsModel: Decodable {
 }
 
 func initReportStatsModelData() -> ReportStatsModel {
-    return ReportStatsModel(
-        readyReports: 0
-        createdReports: 0
-        preferentialReports: 0
-        canceledReports: 0
+    return ReportStatsModel (
+        readyReports: 0,
+        createdReports: 0,
+        preferentialReports: 0,
+        canceledReports: 0,
         topReports: 0
     )
 }
