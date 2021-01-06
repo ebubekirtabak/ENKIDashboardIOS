@@ -10,24 +10,7 @@ import SwiftUI
 struct DashboardView: View {
     let apiURL = "http://169.63.92.54:3001/v1/stats/all"
     @Binding var responseData: ResponseModel
-    @State static var cardData = ReportCardDataModel(
-        imageUrl: "http://52.116.101.196/static/media/linkedin_logo.c24cde28.png",
-        currentValue: 2756,
-        cardValues: [
-            CardValuesModel(
-                title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: 211961
-            ),
-            CardValuesModel(
-                title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: 578
-            ),
-            CardValuesModel(
-                title: "Preferential", iconName: "arrow.up", backgroundColorName: "AlertColor", cardValue: 0
-            ),
-            CardValuesModel(
-                title: "Saved", iconName: "folder.fill", backgroundColorName: "SecondaryAccentColor", cardValue: 159756
-            )
-        ]
-    )
+    @State static var cardData = initReportCardData()
         
     var body: some View {
         VStack {
