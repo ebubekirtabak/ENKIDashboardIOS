@@ -17,12 +17,8 @@ struct DashboardView: View {
             NavigationView {
                 NavigationLink(destination: ReportCardView(cardData: DashboardView.$cardData)) {
                     VStack {
-                        ReportCardView(cardData:
-                                        Binding(get: {   self.parseLinkedinData(
-                                            responseData: self.responseData
-                                        ) }, set: { _,_ in  DashboardView.$cardData })
-                                      )
-                        ReportCardView(cardData: DashboardView.$cardData)
+                        ReportCardView(cardData: self.parseLinkedinData(responseData: self.responseData))
+                        ReportCardView(cardData: self.parseReportsData(responseData: self.responseData))
                         ReportCardView(cardData: DashboardView.$cardData)
                     }
                 }
@@ -46,17 +42,37 @@ struct DashboardView: View {
 //        }
     }
     
-    func parseLinkedinData(responseData: ResponseModel) -> ReportCardDataModel {
+    func parseLinkedinData(responseData: ResponseModel) -> Binding<ReportCardDataModel> {
         
-        var cardValue = ReportCardDataModel(
+        let cardValue = ReportCardDataModel(
+            title: "",
             imageUrl: "http://52.116.101.196/static/media/linkedin_logo.c24cde28.png",
+            balloonColor: "SecondaryAccentColor",
             currentValue: responseData.weeklyUserStats[0].number,
+            waitingValue: responseData.scraperStats.waitingUsers,
             cardValues: StatsDataProvider().getLinkedinValues(
                 userStats: responseData.userStats,
                 scraperStats: responseData.scraperStats
             )
         )
-        return cardValue
+        
+        return Binding(get: {  cardValue  }, set: { _,_ in  DashboardView.$cardData })
+    }
+    
+    func parseReportsData(responseData: ResponseModel) -> Binding<ReportCardDataModel> {
+        
+        let cardValue = ReportCardDataModel(
+            title: "Reports",
+            imageUrl: "",
+            balloonColor: "AlertColor",
+            currentValue: responseData.weeklyReportStats[0].number,
+            waitingValue: responseData.reportStats.createdReports,
+            cardValues: StatsDataProvider().getReportValues(
+                reportStats: responseData.reportStats
+            )
+        )
+        
+        return Binding(get: {  cardValue  }, set: { _,_ in  DashboardView.$cardData })
     }
     
 }
