@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ReportCardView: View {
     @Binding var cardData: ReportCardDataModel
-
+    
     var body: some View {
         ZStack(alignment: .leading) {
             CircleViewBackground(
-                colorName: .constant("SecondaryAccentColor"),
+                colorName: .constant(self.cardData.balloonColor),
                 colorOpacity: .constant(0.7)
             )
             VStack(alignment: .leading) {
