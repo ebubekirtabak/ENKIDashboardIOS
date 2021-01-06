@@ -17,10 +17,16 @@ struct ReportCardView: View {
                 colorOpacity: .constant(0.7)
             )
             VStack(alignment: .leading) {
-
+                
                 HStack(alignment: .center) {
-                    RemoteImage(url: self.cardData.imageUrl).aspectRatio(contentMode: .fit).frame(width: 75)
-                    Text("")
+                    if self.cardData.imageUrl.count > 0  {
+                        RemoteImage(url: self.cardData.imageUrl).aspectRatio(contentMode: .fit).frame(width: 75)
+                    }
+                    
+                    Text(self.cardData.title)
+                        .font(.system(size: 20))
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color("PrimaryDarkColor"))
                 }
                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
                 
