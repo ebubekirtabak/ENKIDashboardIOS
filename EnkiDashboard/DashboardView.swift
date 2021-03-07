@@ -16,12 +16,10 @@ struct DashboardView: View {
         VStack {
             NavigationView {
                 NavigationLink(destination: ReportCardView(cardData: DashboardView.$cardData)) {
-                    ScrollView {
-                        VStack {
-                            ReportCardView(cardData: self.parseLinkedinData(responseData: self.responseData))
-                            ReportCardView(cardData: self.parseReportsData(responseData: self.responseData))
-                            ReportCardView(cardData: DashboardView.$cardData)
-                        }
+                    VStack {
+                        ReportCardView(cardData: self.parseLinkedinData(responseData: self.responseData))
+                        ReportCardView(cardData: self.parseReportsData(responseData: self.responseData))
+                        ReportCardView(cardData: DashboardView.$cardData)
                     }
                 }
                 .navigationBarTitle("Dashboard")

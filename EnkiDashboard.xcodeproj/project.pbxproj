@@ -32,6 +32,8 @@
 		9DE05EBC2550B4AD00132819 /* EnkiDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE05EBB2550B4AD00132819 /* EnkiDashboardUITests.swift */; };
 		9DE7ADCF25759D31004354D1 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7ADCE25759D31004354D1 /* CardModifier.swift */; };
 		9DE7ADD825759E22004354D1 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7ADD725759E22004354D1 /* ProgressBarView.swift */; };
+		9DF00FD9259E76480071CC5C /* ScraperStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF00FD8259E76480071CC5C /* ScraperStatsModel.swift */; };
+		9DF00FE4259E7F550071CC5C /* ReportStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF00FE3259E7F550071CC5C /* ReportStatsModel.swift */; };
 		9DF2EE3E256B044A0069A745 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EE3D256B044A0069A745 /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,8 @@
 		9DE05EBD2550B4AD00132819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DE7ADCE25759D31004354D1 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		9DE7ADD725759E22004354D1 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		9DF00FD8259E76480071CC5C /* ScraperStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScraperStatsModel.swift; sourceTree = "<group>"; };
+		9DF00FE3259E7F550071CC5C /* ReportStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportStatsModel.swift; sourceTree = "<group>"; };
 		9DF2EE3D256B044A0069A745 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +175,8 @@
 				9DB5C2212569947F00BB0921 /* CompanyStatsModel.swift */,
 				9DB5C226256998BB00BB0921 /* BaseResponseModel.swift */,
 				9DD7924725952D6D00CCA4D8 /* StatsDataItemModel.swift */,
+				9DF00FD8259E76480071CC5C /* ScraperStatsModel.swift */,
+				9DF00FE3259E7F550071CC5C /* ReportStatsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -421,8 +427,10 @@
 				9D8F646525670F940025C3E9 /* DashboardView.swift in Sources */,
 				9D145D9D25817A4400645AE8 /* CircleView.swift in Sources */,
 				9DB5C2152569938400BB0921 /* UserStatsModel.swift in Sources */,
+				9DF00FE4259E7F550071CC5C /* ReportStatsModel.swift in Sources */,
 				9D9031C725842A34000B52B0 /* CardValuesModel.swift in Sources */,
 				9DE05E9F2550B4AA00132819 /* EnkiDashboardApp.swift in Sources */,
+				9DF00FD9259E76480071CC5C /* ScraperStatsModel.swift in Sources */,
 				9DB5C20D2569930500BB0921 /* ResponseModel.swift in Sources */,
 				9DE7ADD825759E22004354D1 /* ProgressBarView.swift in Sources */,
 				9D19A4302561C1F700B04F17 /* HttpService.swift in Sources */,
