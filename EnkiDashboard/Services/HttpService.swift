@@ -24,7 +24,10 @@ class HttpService {
     func loadJson(fromURLString urlString: String,
                           completion: @escaping (Result<Data, Error>) -> Void) {
         if let url = URL(string: urlString) {
-            let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            let configuration = URLSessionConfiguration.default
+            let token =  ProcessInfo.processInfo.environment["API_TOKEN"]
+            configuration.httpAdditionalHeaders = ["Authorization": "Bearer " + String(token!)]
+            let urlSession = URLSession(configuration: configuration).dataTask(with: url) { (data, response, error) in
                 if let error = error {
                     completion(.failure(error))
                 }

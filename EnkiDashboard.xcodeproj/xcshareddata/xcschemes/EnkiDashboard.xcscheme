@@ -70,6 +70,13 @@
             ReferencedContainer = "container:EnkiDashboard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "API_TOKEN"
+            value = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiIiwidXNlcl9uYW1lIjoiYmV0YUBlbmtpYWkuY29tIiwiZXhwIjoxNjM0ODQ5ODQ5LCJpc3MiOiJsb2NhbGhvc3Q6ODA4MCJ9.9kF7HvhTLiV2b7GZ2w2z03ybI2AG2IbRpT5AIufexQg"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
