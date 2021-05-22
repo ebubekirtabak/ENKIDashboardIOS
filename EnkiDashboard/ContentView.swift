@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var companyList: [CompanyStatsModel] = []
     @State var responseData: ResponseModel = initResponseModel()
-    let apiURL = "http://169.63.92.54:3001/v1/stats/all"
+    let apiUrl = String(ProcessInfo.processInfo.environment["API_URL"]!)
+
     var body: some View {
         TabView {
             DashboardView(responseData: self.$responseData).tabItem {
@@ -30,8 +31,8 @@ struct ContentView: View {
                 Text("Settings")
             }
         }.onAppear {
-            print("Send Request: ", self.apiURL)
-            HttpService().loadJson(fromURLString: self.apiURL) { (result) in
+            print("Send Request: ", self.apiUrl)
+            HttpService().loadJson(fromURLString: self.apiUrl) { (result) in
                 switch result {
                 case .success(let data):
                     self.parse(jsonData: data)
