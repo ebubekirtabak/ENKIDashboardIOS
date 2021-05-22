@@ -51,7 +51,7 @@ struct ContentView: View {
             
             print("Status: ", decodedData.message)
         } catch {
-            print("decode error")
+            print("decode error: \(error).")
         }
     }
 }
