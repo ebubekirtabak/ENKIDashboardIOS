@@ -65,7 +65,7 @@ struct ReportCardView: View {
         var percent: Float
         if (cardData.currentValue > cardData.waitingValue) {
             diff = cardData.currentValue - cardData.waitingValue
-            percent = 100 * self.divide(a: diff, b: cardData.currentValue)
+            percent = self.divide(a: diff, b: cardData.currentValue)
             return percent
         }
         
