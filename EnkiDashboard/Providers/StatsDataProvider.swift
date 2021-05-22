@@ -32,19 +32,37 @@ class StatsDataProvider {
     }
     
     func getReportValues(reportStats: ReportStatsModel) -> [CardValuesModel] {
-    return  [
-        CardValuesModel(
-            title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: (reportStats.topReports - reportStats.createdReports)
-        ),
-        CardValuesModel(
-            title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: reportStats.createdReports
-        ),
-        CardValuesModel(
-            title: "Preferential", iconName: "arrow.up",  backgroundColorName: "SecondaryAccentColor", cardValue: reportStats.preferentialReports
-        ),
-        CardValuesModel(
-            title: "Canceled", iconName: "xmark.circle",backgroundColorName: "AlertColor", cardValue: reportStats.canceledReports
-        )
-    ]
-}
+        return  [
+            CardValuesModel(
+                title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: (reportStats.topReports - reportStats.createdReports)
+            ),
+            CardValuesModel(
+                title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: reportStats.createdReports
+            ),
+            CardValuesModel(
+                title: "Preferential", iconName: "arrow.up",  backgroundColorName: "SecondaryAccentColor", cardValue: reportStats.preferentialReports
+            ),
+            CardValuesModel(
+                title: "Canceled", iconName: "xmark.circle",backgroundColorName: "AlertColor", cardValue: reportStats.canceledReports
+            )
+        ]
+    }
+    
+    func getSearchValues(searchStats: GoogleStatsModel) -> [CardValuesModel] {
+        return  [
+            CardValuesModel(
+                title: "Done", iconName: "checkmark", backgroundColorName: "SecondaryAccentColor", cardValue: (searchStats.topSearch - searchStats.createdSearch)
+            ),
+            CardValuesModel(
+                title: "Waiting", iconName: "hourglass.tophalf.fill", backgroundColorName: "SecondaryColor", cardValue: searchStats.createdSearch
+            ),
+            CardValuesModel(
+                title: "Preferential", iconName: "arrow.up",  backgroundColorName: "SecondaryAccentColor", cardValue: searchStats.preferentialSearch
+            ),
+            CardValuesModel(
+                title: "Canceled", iconName: "xmark.circle",backgroundColorName: "AlertColor", cardValue: searchStats.canceledSearch
+            )
+        ]
+    }
+
 }

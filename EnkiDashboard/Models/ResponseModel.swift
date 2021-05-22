@@ -11,6 +11,7 @@ struct ResponseModel {
     let userStats: UserStatsModel
     let scraperStats: ScraperStatsModel
     let reportStats: ReportStatsModel
+    let googleStats: GoogleStatsModel
     let companyStats: [CompanyStatsModel]
     let weeklyUserStats: [StatsDataItemModel]
     let weeklyReportStats: [StatsDataItemModel]
@@ -23,6 +24,7 @@ extension ResponseModel: Decodable {
         case userStats = "user_stats"
         case scraperStats = "scraper_stats"
         case reportStats = "report_stats"
+        case googleStats = "google_stats"
         case weeklyUserStats = "weekly_user_stats"
         case weeklyReportStats = "weekly_report_stats"
         case weeklyGoogleCacheStats = "weekly_google_cache_stats"
@@ -34,6 +36,7 @@ func initResponseModel() -> ResponseModel {
         userStats: initStatsModelData(),
         scraperStats: initScraperStatsModelData(),
         reportStats: initReportStatsModelData(),
+        googleStats: initGoogleStatsModelData(),
         companyStats: [initCompanyStats()],
         weeklyUserStats: [initStatsDataItemModel()],
         weeklyReportStats: [initStatsDataItemModel()],
