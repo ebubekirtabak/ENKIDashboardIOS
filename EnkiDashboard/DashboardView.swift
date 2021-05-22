@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
-    let apiURL = "http://169.63.92.54:3001/v1/stats/all"
+    let apiURL = "http://52.117.59.162:3001/v1/stats/all"
     @Binding var responseData: ResponseModel
     @State static var cardData = initReportCardData()
         
@@ -19,7 +19,7 @@ struct DashboardView: View {
                     VStack {
                         ReportCardView(cardData: self.parseLinkedinData(responseData: self.responseData))
                         ReportCardView(cardData: self.parseReportsData(responseData: self.responseData))
-                        ReportCardView(cardData: DashboardView.$cardData)
+                        ReportCardView(cardData: self.parseSearchData(responseData: self.responseData))
                     }
                 }
                 .navigationBarTitle("Dashboard")
@@ -46,7 +46,7 @@ struct DashboardView: View {
         
         let cardValue = ReportCardDataModel(
             title: "",
-            imageUrl: "http://52.116.101.196/static/media/linkedin_logo.c24cde28.png",
+            imageUrl: "http://52.117.59.172/static/media/linkedin_logo.c24cde28.png",
             balloonColor: "SecondaryAccentColor",
             currentValue: responseData.weeklyUserStats[0].number,
             waitingValue: responseData.scraperStats.waitingUsers,
@@ -69,6 +69,22 @@ struct DashboardView: View {
             waitingValue: responseData.reportStats.createdReports,
             cardValues: StatsDataProvider().getReportValues(
                 reportStats: responseData.reportStats
+            )
+        )
+        
+        return Binding(get: {  cardValue  }, set: { _,_ in  DashboardView.$cardData })
+    }
+    
+    func parseSearchData(responseData: ResponseModel) -> Binding<ReportCardDataModel> {
+        
+        let cardValue = ReportCardDataModel(
+            title: "Search",
+            imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png",
+            balloonColor: "AccentGreen",
+            currentValue: responseData.weeklyGoogleCacheStats[0].number,
+            waitingValue: responseData.googleStats.createdSearch,
+            cardValues: StatsDataProvider().getSearchValues(
+                searchStats: responseData.googleStats
             )
         )
         
